@@ -41,7 +41,42 @@ const employeesContent = document.getElementById("employeeInserts");
                         </div>
                         <hr>
                     `;
+                    // Add event listeners to the buttons
+                    const buttons = document.querySelectorAll('.crud-button');
 
+                    buttons.forEach(button => {
+                        button.addEventListener('click', async function () {
+                            const action = button.getAttribute('data-action');
+                            const employeeId = button.getAttribute('data-employee-id');
+                            
+                            // Redirect based on the button's action
+                            switch (action) {
+                                case 'view':
+                                    window.location.href = `viewEmployee.html?id=${employeeId}`;
+                                    break;
+                                case 'update':
+                                    window.location.href = `updateEmployee.html?id=${employeeId}`;
+                                    break;
+                                case 'delete':
+                                    try {
+                                        // Send a DELETE request to your API to delete the selected employee
+                                        await axios.delete(`${baseUrl}employee/${employeeId}`);
+                    
+                                        // Display a success message to the user
+                                        alert('Employee deleted successfully.');
+                    
+                                        // Remove the deleted employee from the UI here if needed
+                                        button.parentElement.parentElement.remove();
+                                    } catch (error) {
+                                        // Handle errors that occur during the DELETE request
+                                        console.error('Error deleting employee:', error);
+                                        alert('Error deleting employee.');
+                                    }
+                                    break;
+                            }
+                        });
+                    });
+                    
                     // Append the record div to the employeesContent
                     employeesContent.appendChild(recordDiv);
                 }
