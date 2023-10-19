@@ -25,6 +25,7 @@ async function getOneEmployee(req, res) {
 async function createEmployee(req,res) {
     try {
         const employee = await new Employee (req.body)
+        console.log(req.body)
         await employee.save()
         return res.status(201).json({
             employee
@@ -61,19 +62,19 @@ async function deleteEmployee(req,res) {
     }
 }
 
-const searchEmployeeByName = (req, res) => {
-    const { firstName, lastName } = req.query;
-    // Search for employees based on first and last name
-    const matchingEmployees = employees.filter(employee => {
-        return employee.firstName === firstName && employee.lastName === lastName;
-    });
+// const searchEmployeeByName = (req, res) => {
+//     const { firstName, lastName } = req.query;
+//     // Search for employees based on first and last name
+//     const matchingEmployees = employees.filter(employee => {
+//         return employee.firstName === firstName && employee.lastName === lastName;
+//     });
 
-    if (matchingEmployees.length > 0) {
-        res.status(200).json(matchingEmployees);
-    } else {
-        res.status(404).json({ message: 'Employee not found' });
-    }
-};
+//     if (matchingEmployees.length > 0) {
+//         res.status(200).json(matchingEmployees);
+//     } else {
+//         res.status(404).json({ message: 'Employee not found' });
+//     }
+// };
 
 //not working
 async function getEmployeeByfName(req, res) {

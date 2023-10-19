@@ -5,6 +5,7 @@ const db = require('./db')
 const bodyParser = require('body-parser')
 const expressLayout = require('express-ejs-layouts');
 require('dotenv').config();
+const logger = require('morgan')
 
 // include controller name and path here
 const employeeController = require('./controllers/employeeController')
@@ -18,6 +19,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+app.use(logger('dev'))
 
 app.get('/employees', employeeController.getAllEmployees)
 app.get('/clients', clientController.getAllClients)
@@ -40,7 +42,7 @@ app.delete('/client/:id', clientController.deleteClient)
 app.delete('/location/:id', locationController.deleteLocation)
 
 // Route to search employees by first and last name
-app.get('/employees/:firstName', employeeController.getEmployeeByfName);
+app.get('/employee/:firstName', employeeController.getEmployeeByfName);
 
 
 app.get('/', (req, res) => {
@@ -57,10 +59,10 @@ app.listen(PORT, () => {
     console.log(`Express server listening on port ${PORT}`)
   })  
 
-  //handle
-app.get('*', (req, res) => {
-  res.status(404).render()
-});
+//   //handle
+// app.get('*', (req, res) => {
+//   res.status(404).render()
+// });
 
 
 

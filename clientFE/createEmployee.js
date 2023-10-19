@@ -1,6 +1,7 @@
 createEmployeebtn = document.getElementById("createEmployeebtn")
 
-createEmployeebtn.addEventListener('click', async () => {
+createEmployeebtn.addEventListener('click', async (e) => {
+    e.preventDefault()
     const base_Url = "http://localhost:3001/";
     const firstName = document.getElementById("firstName").value
     const lastName = document.getElementById("lastName").value
@@ -11,7 +12,7 @@ createEmployeebtn.addEventListener('click', async () => {
     const locationPreference = document.getElementById("locationPreference").value
     const availability = document.getElementById("availability").value
     const hourlyPayRate = document.getElementById("hourlyPayRate").value
-
+    console.log('employee Create')
     try {
         
         const response = await axios.post(`${base_Url}employee`, {
@@ -22,7 +23,7 @@ createEmployeebtn.addEventListener('click', async () => {
             address: address,
             position: position,
             locationPreference: locationPreference,
-            availability: availability,
+            availability: true,
             hourlyPayRate: hourlyPayRate
         })
 
