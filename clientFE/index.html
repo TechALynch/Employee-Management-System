@@ -6,9 +6,10 @@
      <!-- link CSS -->
     <link rel="stylesheet" href="styles.css" />
     <!-- link favcon -->
-     <link rel="icon" href="./favcon.png" type="image/x-icon">
-    <!-- link axios -->
+    <link rel="icon" href="./favcon.png" type="image/x-icon">
+    <!-- link for hamburger icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- link axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- link javaScript -->
     <script defer src="script.js"></script>
@@ -26,7 +27,7 @@
   <a href="contact.html">Contact Admin</a>
 </div>
 <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+<a class="icon" onclick="myFunction()">
   <i class="fa fa-bars"></i>
 </a>
 </div>
@@ -36,7 +37,7 @@
         <input type="text" id="search-bar" placeholder="Search...">
         <button id="search-button">Search</button>
     </div>
-    <button class="add" id="add">Add</button>
+    <a class="add" href="createEmployee.html">Add</a>
     <div  id=recordItems class="row">
       <h5 class="tableCName"> First Name </h5>
       <h5 class="tableCName"> Last Name</h5>
