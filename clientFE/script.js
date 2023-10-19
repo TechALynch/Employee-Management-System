@@ -34,9 +34,9 @@ const employeesContent = document.getElementById("employeeInserts");
                                 <p class="record-item"> ${employeesInfo.tel}</p>
                                 <p class="record-item"> ${employeesInfo.email}</p>
                             <div class="record-actions">
-                                <button class="crud-button" data-employee-id="${employeesInfo.id}" data-action="view">View</button>
-                                <button class="crud-button" data-employee-id="${employeesInfo.id}" data-action="update">Update</button>
-                                <button class="crud-button" data-employee-id="${employeesInfo.id}" data-action="delete">Delete</button>
+                                <button class="crud-button" data-employee-id="${employeesInfo._id}" data-action="view">View</button>
+                                <button class="crud-button" data-employee-id="${employeesInfo._id}" data-action="update">Update</button>
+                                <button class="crud-button" data-employee-id="${employeesInfo._id}" data-action="delete">Delete</button>
                             </div>
                         </div>
                         <hr>
@@ -110,9 +110,9 @@ searchButton.addEventListener('click', async () => {
                 <p class="record-item"> ${employeesInfo.tel}</p>
                 <p class="record-item"> ${employeesInfo.email}</p>
                 <div class="record-actions">
-                    <button class="crud-button" data-employee-id="${employeesInfo.id}" data-action="view">View</button>
-                    <button class="crud-button" data-employee-id="${employeesInfo.id}" data-action="update">Update</button>
-                    <button class="crud-button" data-employee-id="${employeesInfo.id}" data-action="delete">Delete</button>
+                    <button class="crud-button" data-employee-id="${employeesInfo._id}" data-action="view">View</button>
+                    <button class="crud-button" data-employee-id="${employeesInfo._id}" data-action="update">Update</button>
+                    <button class="crud-button" data-employee-id="${employeesInfo._id}" data-action="delete">Delete</button>
                 </div>
             </div>
             <hr>
