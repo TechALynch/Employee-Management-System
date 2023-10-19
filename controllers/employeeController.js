@@ -79,7 +79,7 @@ const searchEmployeeByName = (req, res) => {
 async function getEmployeeByfName(req, res) {
     try {
         const firstName = req.params.firstName
-        const employee = await Employee.findB(firstName)
+        const employee = await Employee.findById(firstName)
         if (employee) {
             return res.json(employee)
         }

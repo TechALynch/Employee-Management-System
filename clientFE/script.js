@@ -2,7 +2,6 @@
 const searchBar = document.getElementById('search-bar');
 const searchButton = document.getElementById('search-button');
 const employeesContent = document.getElementById("employeeInserts");
-createEmployeebtn = document.getElementById("createEmployeebtn");
 
   document.addEventListener("DOMContentLoaded", async function () {
     const base_Url = "http://localhost:3001/";

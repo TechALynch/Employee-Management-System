@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- link CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- link favcon -->
+    <link rel="icon" href="./favcon.png" type="image/x-icon">
+    <!-- link for hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About Me - Employee Management Database</title>
+ 
+</head>
+<body>
+    <header>
+        <!-- Top Navigation Menu -->
+<div class="topnav">
+<a href="#home" class="active" id="menuName">Home</a>
+<!-- Navigation links (hidden by default) -->
+<div id="myLinks">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact Admin</a>
+</div>
+<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+<a class="icon" onclick="myFunction()">
+  <i class="fa fa-bars"></i>
+</a>
+</div>
+<h1>About Me</h1>
+</header>
+
+    <section class="about-section">
+        <h2>Introduction</h2>
+        <p>
+            Welcome to my Employee Management Database system, a simple yet powerful application that allows you to manage employee data effectively. I'm passionate about building efficient solutions for businesses, and this project is a reflection of that passion.
+        </p>
+    </section>
+
+    <section class="features-section">
+        <h2>Key Features</h2>
+        <ul>
+            <li>
+                <strong>Full CRUD Operations:</strong> With this application, you can Create, Read, Update, and Delete employee records on the backend. It provides complete control over your data.
+            </li>
+            <li>
+                <strong>Front-End Interface:</strong> The front end is built using vanilla JavaScript, HTML, and CSS. It offers a user-friendly interface for managing employees.
+            </li>
+            <li>
+                <strong>Backend with Node.js and MongoDB:</strong> The backend of the application is developed using Node.js and MongoDB. Mongoose is used for database modeling and interaction.
+            </li>
+            <li>
+                <strong>Asynchronous Communication:</strong> Axios is employed to make asynchronous requests for data manipulation. This ensures a smooth user experience.
+            </li>
+        </ul>
+    </section>
+
+    <section class="contact-section">
+        <h2>Contact Me</h2>
+        <p>
+            If you have any questions, suggestions, or would like to collaborate on a project, feel free to get in touch. You can reach me via email at.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Employee Management Database</p>
+    </footer>
+    <script>function myFunction() { //w3Schools
+        const myLinks = document.getElementById("myLinks");
+        if (myLinks.style.display === "block") {
+            myLinks.style.display = "none";
+        } else {
+            myLinks.style.display = "block";
+        }
+      }</script>
+</body>
+</html>
