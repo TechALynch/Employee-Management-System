@@ -1,5 +1,5 @@
 const db = require('../db');
-const { Employee, Client, Location } = require('../models/index');
+const { Employee } = require('../models/index');
 
 // db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
@@ -8,6 +8,8 @@ const main = async () => {
     const employee1 = new Employee({
         firstName: 'Anthony',
         lastName: 'Johnston',
+        tel: '617-384-2045',
+        email: 'anthony.johnston001@gmail.com',
         address: '108 Oak Street',
         position: 'Lead Security Officer',
         locationPreference: '535 Tremont Street',
@@ -21,9 +23,11 @@ const main = async () => {
      const employee2 = new Employee({
         firstName: 'John',
         lastName: 'Smith',
+        tel: '403-204-1246',
+        email: 'John.SmithweF@gmail.com',
         address: '123 Elm Street',
         position: 'Security Officer',
-        locationPreference: '123 Main Street',
+        locationPreference: '535 Tremont Street',
         availability: true,
         hourlyPayRate: 20.0,
     });
@@ -33,9 +37,11 @@ const main = async () => {
     const employee3 = new Employee({
         firstName: 'Emily',
         lastName: 'Johnson',
+        tel: '406-536-3613',
+        email: 'Emily.Johnson@gmail.com',
         address: '456 Oak Avenue',
         position: 'Security Supervisor',
-        locationPreference: '789 Pine Road',
+        locationPreference: '535 Tremont Street',
         availability: false,
         hourlyPayRate: 22.0,
     });
@@ -45,9 +51,11 @@ const main = async () => {
     const employee4 = new Employee({
         firstName: 'Michael',
         lastName: 'Davis',
+        tel: '582-152-2042',
+        email: 'Michael.Davis@gmail.com',
         address: '789 Maple Lane',
         position: 'Security Guard',
-        locationPreference: '456 Oak Avenue',
+        locationPreference: '535 Tremont Street',
         availability: true,
         hourlyPayRate: 18.0,
     });
@@ -57,9 +65,11 @@ const main = async () => {
     const employee5 = new Employee({
         firstName: 'Sarah',
         lastName: 'Anderson',
+        tel: '617-283-7298',
+        email: 'Sarah.Anderson@gmail.com',
         address: '234 Oak Road',
         position: 'Security Officer',
-        locationPreference: '567 Cedar Street',
+        locationPreference: '535 Tremont Street',
         availability: true,
         hourlyPayRate: 21.5,
     });
@@ -69,9 +79,11 @@ const main = async () => {
     const employee6 = new Employee({
         firstName: 'William',
         lastName: 'Brown',
+        tel: '617-382-9145',
+        email: 'William.Brown@gmail.com',
         address: '111 Pine Road',
         position: 'Security Supervisor',
-        locationPreference: '123 Elm Street',
+        locationPreference: '535 Tremont Street',
         availability: true,
         hourlyPayRate: 24.0,
     });
@@ -81,9 +93,11 @@ const main = async () => {
     const employee7 = new Employee({
         firstName: 'Robert',
         lastName: 'Wilson',
+        tel: '291-283-4824',
+        email: 'Robert.Wilson@gmail.com',
         address: '321 Oak Street',
         position: 'Security Guard',
-        locationPreference: '789 Pine Road',
+        locationPreference: '535 Tremont Street',
         availability: false,
         hourlyPayRate: 20.5,
     });
@@ -93,9 +107,11 @@ const main = async () => {
     const employee8 = new Employee({
         firstName: 'Jennifer',
         lastName: 'Lee',
+        tel: '508-283-6277',
+        email: 'Jennifer.Lee@gmail.com',
         address: '987 Elm Lane',
         position: 'Senior Security Officer',
-        locationPreference: '234 Oak Avenue',
+        locationPreference: '535 Tremont Street',
         availability: true,
         hourlyPayRate: 23.0,
     });
@@ -105,9 +121,11 @@ const main = async () => {
     const employee9 = new Employee({
         firstName: 'Samuel',
         lastName: 'Garcia',
+        tel: '617-456-7890',
+        email: 'Samuel.Garcia@gmail.com',
         address: '654 Pine Road',
         position: 'Security Officer',
-        locationPreference: '111 Cedar Avenue',
+        locationPreference: '535 Tremont Street',
         availability: true,
         hourlyPayRate: 19.0,
     });
@@ -117,9 +135,11 @@ const main = async () => {
     const employee10 = new Employee({
         firstName: 'Megan',
         lastName: 'Harris',
+        tel: '617-123-4567',
+        email: 'Megan.Harris@gmail.com',
         address: '456 Cedar Street',
         position: 'Security Supervisor',
-        locationPreference: '789 Maple Road',
+        locationPreference: '535 Tremont Street',
         availability: true,
         hourlyPayRate: 25.0,
     });
@@ -129,9 +149,11 @@ const main = async () => {
     const employee11 = new Employee({
         firstName: 'David',
         lastName: 'Martin',
+        tel: '617-890-1234',
+        email: 'David.Martin@gmail.com',
         address: '876 Oak Road',
         position: 'Lead Security Officer',
-        locationPreference: '123 Pine Lane',
+        locationPreference: '535 Tremont Street',
         availability: false,
         hourlyPayRate: 27.0,
     });
@@ -141,9 +163,11 @@ const main = async () => {
     const employee12 = new Employee({
         firstName: 'Sophia',
         lastName: 'Jackson',
+        tel: '617-555-6789',
+        email: 'Sophia.Jackson@gmail.com',
         address: '567 Elm Avenue',
         position: 'Security Officer',
-        locationPreference: '555 Maple Lane',
+        locationPreference: '535 Tremont Street',
         availability: true,
         hourlyPayRate: 20.0,
     });
@@ -153,9 +177,11 @@ const main = async () => {
     const employee13 = new Employee({
         firstName: 'Liam',
         lastName: 'Moore',
+        tel: '617-333-2222',
+        email: 'Liam.Moore@gmail.com',
         address: '777 Pine Road',
         position: 'Security Supervisor',
-        locationPreference: '222 Cedar Street',
+        locationPreference: '535 Tremont Street',
         availability: true,
         hourlyPayRate: 24.5,
     });
@@ -165,9 +191,11 @@ const main = async () => {
     const employee14 = new Employee({
         firstName: 'Olivia',
         lastName: 'Thomas',
+        tel: '617-777-5555',
+        email: 'Olivia.Thomas@gmail.com',
         address: '654 Oak Lane',
         position: 'Security Guard',
-        locationPreference: '333 Elm Road',
+        locationPreference: '123 Main Street',
         availability: false,
         hourlyPayRate: 21.0,
     });
@@ -177,9 +205,11 @@ const main = async () => {
     const employee15 = new Employee({
         firstName: 'Noah',
         lastName: 'Hernandez',
+        tel: '617-999-8888',
+        email: 'Noah.Hernandez@gmail.com',
         address: '111 Maple Road',
         position: 'Security Officer',
-        locationPreference: '789 Cedar Lane',
+        locationPreference: '123 Main Street',
         availability: true,
         hourlyPayRate: 22.0,
     });
@@ -189,9 +219,11 @@ const main = async () => {
     const employee16 = new Employee({
         firstName: 'Emma',
         lastName: 'White',
+        tel: '617-444-3333',
+        email: 'Emma.White@gmail.com',
         address: '123 Pine Street',
         position: 'Senior Security Officer',
-        locationPreference: '456 Elm Avenue',
+        locationPreference: '123 Main Street',
         availability: false,
         hourlyPayRate: 26.0,
     });
@@ -201,9 +233,11 @@ const main = async () => {
     const employee17 = new Employee({
         firstName: 'Ella',
         lastName: 'Wilson',
+        tel: '617-666-9999',
+        email: 'Ella.Wilson@gmail.com',
         address: '456 Cedar Avenue',
         position: 'Security Officer',
-        locationPreference: '777 Oak Street',
+        locationPreference: '123 Main Street',
         availability: true,
         hourlyPayRate: 20.0,
     });
@@ -213,9 +247,11 @@ const main = async () => {
     const employee18 = new Employee({
         firstName: 'James',
         lastName: 'Roberts',
+        tel: '617-222-1111',
+        email: 'James.Roberts@gmail.com',
         address: '789 Pine Lane',
         position: 'Lead Security Officer',
-        locationPreference: '111 Elm Road',
+        locationPreference: '123 Main Street',
         availability: true,
         hourlyPayRate: 25.0,
     });
@@ -225,9 +261,11 @@ const main = async () => {
     const employee19 = new Employee({
         firstName: 'Ava',
         lastName: 'Davis',
+        tel: '123-456-7890',
+        email: 'Ava.Davis@gmail.com',
         address: '234 Maple Street',
         position: 'Security Supervisor',
-        locationPreference: '456 Pine Road',
+        locationPreference: '123 Main Street',
         availability: false,
         hourlyPayRate: 22.0,
     });
@@ -237,9 +275,11 @@ const main = async () => {
     const employee20 = new Employee({
         firstName: 'Daniel',
         lastName: 'Clark',
+        tel: '234-567-8901',
+        email: 'Daniel.Clark@gmail.com',
         address: '555 Elm Lane',
         position: 'Security Guard',
-        locationPreference: '333 Oak Avenue',
+        locationPreference: '123 Main Street',
         availability: true,
         hourlyPayRate: 19.5,
     });
@@ -249,9 +289,11 @@ const main = async () => {
     const employee21 = new Employee({
         firstName: 'Grace',
         lastName: 'Smith',
+        tel: '345-678-9012',
+        email: 'Grace.Smith@gmail.com',
         address: '123 Pine Street',
         position: 'Senior Security Officer',
-        locationPreference: '456 Elm Avenue',
+        locationPreference: '123 Main Street',
         availability: true,
         hourlyPayRate: 26.0,
     });
@@ -260,9 +302,11 @@ const main = async () => {
     const employee22 = new Employee({
         firstName: 'Liam',
         lastName: 'Roberts',
+        tel: '456-789-9273',
+        email: 'Liam.Roberts@gmail.com',
         address: '987 Cedar Road',
         position: 'Security Officer',
-        locationPreference: '222 Elm Lane',
+        locationPreference: '789 Pine Road',
         availability: true,
         hourlyPayRate: 20.0,
     });
@@ -271,6 +315,8 @@ const main = async () => {
     const employee23 = new Employee({
         firstName: 'Mia',
         lastName: 'Johnson',
+        tel: '567-890-1234',
+        email: 'Mia.Johnson@gmail.com',
         address: '654 Maple Lane',
         position: 'Security Supervisor',
         locationPreference: '789 Pine Road',
@@ -282,9 +328,11 @@ const main = async () => {
     const employee24 = new Employee({
         firstName: 'Oliver',
         lastName: 'Davis',
+        tel: '678-901-2345',
+        email: 'Oliver.Davis@gmail.com',
         address: '333 Elm Street',
         position: 'Security Guard',
-        locationPreference: '777 Oak Avenue',
+        locationPreference: '789 Pine Road',
         availability: true,
         hourlyPayRate: 21.5,
     });
@@ -293,9 +341,11 @@ const main = async () => {
     const employee25 = new Employee({
         firstName: 'Emma',
         lastName: 'Wilson',
+        tel: '789-832-3456',
+        email: 'Emma.Wilson@gmail.com',
         address: '111 Cedar Lane',
         position: 'Lead Security Officer',
-        locationPreference: '123 Pine Road',
+        locationPreference: '789 Pine Road',
         availability: false,
         hourlyPayRate: 27.0,
     });
@@ -304,9 +354,11 @@ const main = async () => {
     const employee26 = new Employee({
         firstName: 'Noah',
         lastName: 'Brown',
+        tel: '890-123-4567',
+        email: 'Noah.Brown@gmail.com',
         address: '876 Elm Avenue',
         position: 'Security Officer',
-        locationPreference: '555 Cedar Lane',
+        locationPreference: '789 Pine Road',
         availability: true,
         hourlyPayRate: 20.0,
     });
@@ -315,9 +367,11 @@ const main = async () => {
     const employee27 = new Employee({
         firstName: 'Sophia',
         lastName: 'Johnson',
+        tel: '987-654-3210',
+        email: 'Sophia.Johnson@gmail.com',
         address: '777 Pine Road',
         position: 'Security Supervisor',
-        locationPreference: '222 Elm Street',
+        locationPreference: '789 Pine Road',
         availability: true,
         hourlyPayRate: 24.5,
     });
@@ -326,9 +380,11 @@ const main = async () => {
     const employee28 = new Employee({
         firstName: 'Liam',
         lastName: 'Roberts',
+        tel: '876-543-2109',
+        email: 'Liam.Roberts@gmail.com',
         address: '654 Oak Lane',
         position: 'Security Guard',
-        locationPreference: '333 Elm Road',
+        locationPreference: '456 Cedar Avenue',
         availability: false,
         hourlyPayRate: 21.0,
     });
@@ -337,9 +393,11 @@ const main = async () => {
     const employee29 = new Employee({
         firstName: 'Olivia',
         lastName: 'Thomas',
+        tel: '765-432-1098',
+        email: 'Olivia.Thomas@gmail.com',
         address: '111 Maple Road',
         position: 'Security Officer',
-        locationPreference: '789 Cedar Lane',
+        locationPreference: '456 Cedar Avenue',
         availability: true,
         hourlyPayRate: 22.0,
     });
@@ -348,9 +406,11 @@ const main = async () => {
     const employee30 = new Employee({
         firstName: 'Noah',
         lastName: 'Hernandez',
+        tel: '654-321-2845',
+        email: 'Noah.Hernandez@gmail.com',
         address: '123 Pine Street',
         position: 'Senior Security Officer',
-        locationPreference: '456 Elm Avenue',
+        locationPreference: '456 Cedar Avenue',
         availability: false,
         hourlyPayRate: 26.0,
     });
@@ -360,9 +420,11 @@ const main = async () => {
     const employee31 = new Employee({
         firstName: 'Isabella',
         lastName: 'Lopez',
+        tel: '234-381-8901',
+        email: 'Isabella.Lopez@gmail.com',
         address: '456 Pine Avenue',
         position: 'Security Guard',
-        locationPreference: '222 Cedar Road',
+        locationPreference: '456 Cedar Avenue',
         availability: true,
         hourlyPayRate: 19.0,
     });
@@ -371,9 +433,11 @@ const main = async () => {
     const employee32 = new Employee({
         firstName: 'Henry',
         lastName: 'Garcia',
+        tel: '425-555-1234',
+        email: 'Henry.Garcia@gmail.com',
         address: '789 Elm Street',
         position: 'Security Supervisor',
-        locationPreference: '111 Oak Lane',
+        locationPreference: '555 Elm Lane',
         availability: true,
         hourlyPayRate: 24.0,
     });
@@ -382,9 +446,11 @@ const main = async () => {
     const employee33 = new Employee({
         firstName: 'Aria',
         lastName: 'Martinez',
+        tel: '312-555-5678',
+        email: 'Aria.Martinez@gmail.com',
         address: '333 Cedar Lane',
         position: 'Security Officer',
-        locationPreference: '789 Maple Avenue',
+        locationPreference: '555 Elm Lane',
         availability: false,
         hourlyPayRate: 22.5,
     });
@@ -393,6 +459,8 @@ const main = async () => {
     const employee34 = new Employee({
         firstName: 'Jack',
         lastName: 'Johnson',
+        tel: '818-555-9876',
+        email: 'Jack.Johnson@gmail.com',
         address: '777 Pine Street',
         position: 'Security Guard',
         locationPreference: '555 Elm Road',
@@ -404,9 +472,11 @@ const main = async () => {
     const employee35 = new Employee({
         firstName: 'Evelyn',
         lastName: 'Thompson',
+        tel: '202-555-6543',
+        email: 'Evelyn.Thompson@gmail.com',
         address: '234 Elm Avenue',
         position: 'Lead Security Officer',
-        locationPreference: '333 Pine Road',
+        locationPreference: '222 Oak Road',
         availability: false,
         hourlyPayRate: 28.0,
     });
@@ -415,9 +485,11 @@ const main = async () => {
     const employee36 = new Employee({
         firstName: 'Oliver',
         lastName: 'Smith',
+        tel: '303-555-8765',
+        email: 'Oliver.Smith@gmail.com',
         address: '876 Cedar Street',
         position: 'Security Guard',
-        locationPreference: '123 Maple Lane',
+        locationPreference: '222 Oak Road',
         availability: true,
         hourlyPayRate: 21.0,
     });
@@ -426,9 +498,11 @@ const main = async () => {
     const employee37 = new Employee({
         firstName: 'Ella',
         lastName: 'Anderson',
+        tel: '415-555-2345',
+        email: 'Ella.Anderson@gmail.com',
         address: '111 Oak Road',
         position: 'Security Officer',
-        locationPreference: '555 Cedar Avenue',
+        locationPreference: '222 Oak Road',
         availability: true,
         hourlyPayRate: 19.5,
     });
@@ -437,9 +511,11 @@ const main = async () => {
     const employee38 = new Employee({
         firstName: 'William',
         lastName: 'Davis',
+        tel: '512-555-7890',
+        email: 'William.Davis@gmail.com',
         address: '789 Elm Lane',
         position: 'Security Supervisor',
-        locationPreference: '654 Pine Road',
+        locationPreference: '222 Oak Road',
         availability: false,
         hourlyPayRate: 23.0,
     });
@@ -448,9 +524,11 @@ const main = async () => {
     const employee39 = new Employee({
         firstName: 'Mia',
         lastName: 'Moore',
+        tel: '617-555-5432',
+        email: 'Mia.Moore@gmail.com',
         address: '456 Pine Lane',
         position: 'Lead Security Officer',
-        locationPreference: '987 Cedar Street',
+        locationPreference: '222 Oak Road',
         availability: true,
         hourlyPayRate: 27.0,
     });
@@ -459,9 +537,11 @@ const main = async () => {
     const employee40 = new Employee({
         firstName: 'James',
         lastName: 'Roberts',
+        tel: '305-555-8901',
+        email: 'James.Roberts@gmail.com',
         address: '123 Elm Avenue',
         position: 'Security Officer',
-        locationPreference: '456 Maple Road',
+        locationPreference: '333 Pine Street',
         availability: true,
         hourlyPayRate: 20.0,
     });
@@ -470,9 +550,11 @@ const main = async () => {
     const employee41 = new Employee({
         firstName: 'Charlotte',
         lastName: 'Brown',
+        tel: '408-555-4321',
+        email: 'Charlotte.Brown@gmail.com',
         address: '777 Oak Street',
         position: 'Security Guard',
-        locationPreference: '111 Cedar Lane',
+        locationPreference: '333 Pine Street',
         availability: true,
         hourlyPayRate: 22.0,
     });
@@ -481,9 +563,11 @@ const main = async () => {
     const employee42 = new Employee({
         firstName: 'Henry',
         lastName: 'Williams',
+        tel: '213-555-6789',
+        email: 'Henry.Williams@gmail.com',
         address: '555 Elm Lane',
         position: 'Security Supervisor',
-        locationPreference: '987 Pine Road',
+        locationPreference: '333 Pine Street',
         availability: false,
         hourlyPayRate: 24.0,
     });
@@ -492,9 +576,11 @@ const main = async () => {
     const employee43 = new Employee({
         firstName: 'Aria',
         lastName: 'Lopez',
+        tel: '404-555-2109',
+        email: 'Aria.Lopez@gmail.com',
         address: '456 Pine Avenue',
         position: 'Security Officer',
-        locationPreference: '654 Cedar Avenue',
+        locationPreference: '777 Cedar Lane',
         availability: true,
         hourlyPayRate: 19.0,
     });
@@ -503,9 +589,11 @@ const main = async () => {
     const employee44 = new Employee({
         firstName: 'Liam',
         lastName: 'Garcia',
+        tel: '510-555-3456',
+        email: 'Liam.Garcia@gmail.com',
         address: '789 Elm Street',
         position: 'Lead Security Officer',
-        locationPreference: '222 Elm Road',
+        locationPreference: '777 Cedar Lane',
         availability: true,
         hourlyPayRate: 25.0,
     });
@@ -514,9 +602,11 @@ const main = async () => {
     const employee45 = new Employee({
         firstName: 'Sophia',
         lastName: 'Martinez',
+        tel: '786-555-4612',
+        email: 'Sophia.Martinez@gmail.com',
         address: '333 Cedar Lane',
         position: 'Security Guard',
-        locationPreference: '444 Pine Lane',
+        locationPreference: '777 Cedar Lane',
         availability: false,
         hourlyPayRate: 22.5,
     });
@@ -525,9 +615,11 @@ const main = async () => {
     const employee46 = new Employee({
         firstName: 'Lucas',
         lastName: 'Johnson',
+        tel: '702-555-5678',
+        email: 'Lucas.Johnson@gmail.com',
         address: '777 Pine Street',
         position: 'Security Officer',
-        locationPreference: '555 Oak Road',
+        locationPreference: '777 Cedar Lane',
         availability: true,
         hourlyPayRate: 20.5,
     });
@@ -536,9 +628,11 @@ const main = async () => {
     const employee47 = new Employee({
         firstName: 'Olivia',
         lastName: 'Thompson',
+        tel: '305-555-5432',
+        email: 'Olivia.Thompson@gmail.com',
         address: '234 Elm Avenue',
         position: 'Lead Security Officer',
-        locationPreference: '333 Pine Road',
+        locationPreference: '888 Elm Street',
         availability: false,
         hourlyPayRate: 28.0,
     });
@@ -547,9 +641,11 @@ const main = async () => {
     const employee48 = new Employee({
         firstName: 'Elijah',
         lastName: 'Smith',
+        tel: '212-555-2345',
+        email: 'Elijah.Smith@gmail.com',
         address: '876 Cedar Street',
         position: 'Security Guard',
-        locationPreference: '123 Elm Lane',
+        locationPreference: '888 Elm Street',
         availability: true,
         hourlyPayRate: 21.0,
     });
@@ -558,9 +654,11 @@ const main = async () => {
     const employee49 = new Employee({
         firstName: 'Ava',
         lastName: 'Davis',
+        tel: '972-555-8765',
+        email: 'Ava.Davis@gmail.com',
         address: '111 Oak Road',
         position: 'Security Officer',
-        locationPreference: '555 Pine Street',
+        locationPreference: '888 Elm Street',
         availability: true,
         hourlyPayRate: 19.5,
     });
@@ -569,208 +667,16 @@ const main = async () => {
     const employee50 = new Employee({
         firstName: 'William',
         lastName: 'Moore',
+        tel: '213-555-1098',
+        email: 'William.Moore@gmail.com',
         address: '789 Elm Lane',
         position: 'Security Supervisor',
-        locationPreference: '654 Cedar Avenue',
+        locationPreference: '999 Pine Lane',
         availability: false,
         hourlyPayRate: 23.0,
     });
     
     await employee50.save();    
-
-    // Create a Location instance
-    const location1 = new Location({
-        city: 'Boston',
-        state: 'Massachusetts',
-        country: 'United States of America',
-        contractAddress: '535 Tremont Street',
-    });
-
-    // Save the Location instance to the database
-    await location1.save();
-
-    const location2 = new Location({
-        city: 'New York',
-        state: 'New York',
-        country: 'United States of America',
-        contractAddress: '123 Main Street',
-    });
-
-    await location2.save();
-
-    const location3 = new Location({
-        city: 'Chicago',
-        state: 'Illinois',
-        country: 'United States of America',
-        contractAddress: '789 Pine Road',
-    });
-
-    await location3.save();
-
-    const location4 = new Location({
-        city: 'Los Angeles',
-        state: 'California',
-        country: 'United States of America',
-        contractAddress: '456 Cedar Avenue',
-    });
-
-    await location4.save();
-
-    const location5 = new Location({
-        city: 'San Francisco',
-        state: 'California',
-        country: 'United States of America',
-        contractAddress: '555 Elm Lane',
-    });
-
-    await location5.save();
-
-    const location6 = new Location({
-        city: 'Miami',
-        state: 'Florida',
-        country: 'United States of America',
-        contractAddress: '222 Oak Road',
-    });
-
-    await location6.save();
-
-    const location7 = new Location({
-        city: 'Dallas',
-        state: 'Texas',
-        country: 'United States of America',
-        contractAddress: '333 Pine Street',
-    });
-
-    await location7.save();
-
-    const location8 = new Location({
-        city: 'Seattle',
-        state: 'Washington',
-        country: 'United States of America',
-        contractAddress: '777 Cedar Lane',
-    });
-
-    await location8.save();
-
-    const location9 = new Location({
-        city: 'Atlanta',
-        state: 'Georgia',
-        country: 'United States of America',
-        contractAddress: '888 Elm Street',
-    });
-
-    await location9.save();
-
-    const location10 = new Location({
-        city: 'Denver',
-        state: 'Colorado',
-        country: 'United States of America',
-        contractAddress: '999 Pine Lane',
-    });
-
-    await location10.save();
-
-    // Create a Client instance
-    const client1 = new Client({
-        establishmentName: 'Cyclorama',
-        firstName: 'John',
-        lastName: 'Doe',
-        contractAddress: '535 Tremont Street',
-        contractTotal: 50000,
-    });
-
-    // Save the Client instance to the database
-    await client1.save();
-
-    const client2 = new Client({
-        establishmentName: 'Security Solutions Inc.',
-        firstName: 'Jane',
-        lastName: 'Smith',
-        contractAddress: '123 Main Street',
-        contractTotal: 75000,
-    });
-
-    await client2.save();
-
-    const client3 = new Client({
-        establishmentName: 'Safe Haven Mall',
-        firstName: 'Robert',
-        lastName: 'Johnson',
-        contractAddress: '789 Pine Road',
-        contractTotal: 60000,
-    });
-
-    await client3.save();
-
-    const client4 = new Client({
-        establishmentName: 'City Park Apartments',
-        firstName: 'Maria',
-        lastName: 'Garcia',
-        contractAddress: '111 Cedar Avenue',
-        contractTotal: 35000,
-    });
-
-    await client4.save();
-
-    const client5 = new Client({
-        establishmentName: 'TechHub Inc.',
-        firstName: 'Michael',
-        lastName: 'Davis',
-        contractAddress: '456 Oak Avenue',
-        contractTotal: 80000,
-    });
-
-    await client5.save();
-
-    const client6 = new Client({
-        establishmentName: 'Sunset Mall',
-        firstName: 'Sophia',
-        lastName: 'Johnson',
-        contractAddress: '789 Maple Road',
-        contractTotal: 60000,
-    });
-
-    await client6.save();
-
-    const client7 = new Client({
-        establishmentName: 'ABC Corporation',
-        firstName: 'Daniel',
-        lastName: 'Williams',
-        contractAddress: '222 Elm Street',
-        contractTotal: 45000,
-    });
-
-    await client7.save();
-
-    const client8 = new Client({
-        establishmentName: 'XYZ Enterprises',
-        firstName: 'Melissa',
-        lastName: 'Brown',
-        contractAddress: '333 Oak Avenue',
-        contractTotal: 60000,
-    });
-
-    await client8.save();
-
-    const client9 = new Client({
-        establishmentName: 'Sunrise Hospital',
-        firstName: 'David',
-        lastName: 'Taylor',
-        contractAddress: '444 Pine Road',
-        contractTotal: 70000,
-    });
-
-    await client9.save();
-
-    const client10 = new Client({
-        establishmentName: 'Riverfront Apartments',
-        firstName: 'Emily',
-        lastName: 'Miller',
-        contractAddress: '555 Cedar Lane',
-        contractTotal: 55000,
-    });
-
-    await client10.save();
 
 };
 

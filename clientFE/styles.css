@@ -1,0 +1,200 @@
+/* Search bar start  */
+/* Add styling to your search container */
+.search-container {
+    position: sticky;
+    top: 0;
+    margin-left: 10px;
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+/* Style the search bar and button */
+#search-bar {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#search-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#search-button:hover {
+    background-color: #0056b3;
+}
+/* Search bar end */
+
+/* hambuger menu start */
+/* Style for the hamburger menu button */
+/* .menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}*/
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Search bar start */
+/* Add styling to your search container */
+.search-container {
+    /* Remove position: sticky; */
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+/* Style the search bar and button */
+/* ... (your search bar styles) ... */
+
+/* hambuger menu start */
+/* Style for the hamburger menu button */
+/* .menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}*/
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Style the navigation menu */
+.topnav {
+    /* Change position to relative */
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    text-align: left; /* Align the menu to the left */
+}
+  
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+    display: none;
+    text-align: left; /* Align the links to the left */
+}
+  
+/* Style navigation menu links */
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+  
+/* Style the hamburger menu */
+.topnav a.icon {
+    background: #007bff;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0;
+}
+
+/* CSS for the row and column layout */
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  /* CSS for the table header */
+  .tableCName {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Add some spacing and styling to the horizontal line */
+  hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+  
+  .record-actions{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    align-content: right;
+    flex-direction: column;
+  }
+  .add{
+    display: right;
+    text-align: right; 
+  }
+
+  .crud-button{
+    display: right;
+    margin: 5px;
+    padding: 1px;
+    width: 100px;
+    border: 1px solid #000;
+  }
+  #recordItems{
+    margin-right: 400px;
+  }
+  #add{
+    display: right;
+    text-align: right; 
+   
+  }

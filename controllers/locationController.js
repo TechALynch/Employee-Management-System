@@ -2,8 +2,8 @@ const { Location }  = require('../models');
 
 const getAllLocations = async (req, res) => {
     try {
-        const shirts = await Location.find()
-        res.json(shirts)
+        const locations = await Location.find()
+        res.json(locations)
     } catch (error) {
         return res.status(500).send(error.message);
     }
@@ -12,9 +12,9 @@ const getAllLocations = async (req, res) => {
 async function getOneLocation(req, res) {
     try {
         const id = req.params.id
-        const shirt = await Location.findById(id)
-        if (shirt) {
-            return res.json(shirt)
+        const location = await Location.findById(id)
+        if (location) {
+            return res.json(location)
         }
         return res.status(404).send('Location with this id doesnt exist')
     } catch (error) {
@@ -24,10 +24,10 @@ async function getOneLocation(req, res) {
 
 async function createLocation(req,res) {
     try {
-        const shirt = await new Location (req.body)
-        await shirt.save()
+        const location = await new Location (req.body)
+        await location.save()
         return res.status(201).json({
-            shirt
+            location
         })
     } catch (e) {
         return res.status(500).json({error: e.message})
@@ -38,8 +38,8 @@ async function createLocation(req,res) {
 async function updateLocation(req,res) {
     try {
         const id = req.params.id
-        const shirt = await Location.findByIdAndUpdate(id, req.body, {new: true})
-        if (shirt) {
+        const location = await Location.findByIdAndUpdate(id, req.body, {new: true})
+        if (location) {
             return res.status(200).json(Location)
         }
         throw new Error('Location not found')
@@ -51,8 +51,8 @@ async function updateLocation(req,res) {
 async function deleteLocation(req,res) {
     try {
         const id = req.params.id
-        const shirt =  await Location.findByIdAndDelete(id)
-        if (shirt) {
+        const location =  await Location.findByIdAndDelete(id)
+        if (location) {
             return res.status(200).json(Location)
         }
         throw new Error('Location not found')

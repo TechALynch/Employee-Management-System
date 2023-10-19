@@ -2,8 +2,8 @@ const { Client }  = require('../models');
 
 const getAllClients = async (req, res) => {
     try {
-        const shirts = await Client.find()
-        res.json(shirts)
+        const clients = await Client.find()
+        res.json(clients)
     } catch (error) {
         return res.status(500).send(error.message);
     }
@@ -12,9 +12,9 @@ const getAllClients = async (req, res) => {
 async function getOneClient(req, res) {
     try {
         const id = req.params.id
-        const shirt = await Client.findById(id)
-        if (shirt) {
-            return res.json(shirt)
+        const client = await Client.findById(id)
+        if (client) {
+            return res.json(client)
         }
         return res.status(404).send('Client with this id doesnt exist')
     } catch (error) {
@@ -24,10 +24,10 @@ async function getOneClient(req, res) {
 
 async function createClient(req,res) {
     try {
-        const shirt = await new Client (req.body)
-        await shirt.save()
+        const client = await new Client (req.body)
+        await client.save()
         return res.status(201).json({
-            shirt
+            client
         })
     } catch (e) {
         return res.status(500).json({error: e.message})
@@ -38,8 +38,8 @@ async function createClient(req,res) {
 async function updateClient(req,res) {
     try {
         const id = req.params.id
-        const shirt = await Client.findByIdAndUpdate(id, req.body, {new: true})
-        if (shirt) {
+        const client = await Client.findByIdAndUpdate(id, req.body, {new: true})
+        if (client) {
             return res.status(200).json(Client)
         }
         throw new Error('Client not found')
@@ -51,8 +51,8 @@ async function updateClient(req,res) {
 async function deleteClient(req,res) {
     try {
         const id = req.params.id
-        const shirt =  await Client.findByIdAndDelete(id)
-        if (shirt) {
+        const client =  await Client.findByIdAndDelete(id)
+        if (client) {
             return res.status(200).json(Client)
         }
         throw new Error('Client not found')

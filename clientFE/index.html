@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- link CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- link favcon -->
+     <link rel="icon" href="./favcon.png" type="image/x-icon">
+    <!-- link axios -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- link javaScript -->
+    <script defer src="script.js"></script>
+    <title>EMDBS</title>
+</head>
+<body>
+    <header>
+        <!-- Top Navigation Menu -->
+<div class="topnav">
+<a href="#home" class="active" id="menuName">Home</a>
+<!-- Navigation links (hidden by default) -->
+<div id="myLinks">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact Admin</a>
+</div>
+<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <i class="fa fa-bars"></i>
+</a>
+</div>
+</header>
+    <!-- search bar container -->
+    <div class="search-container" id="search-container">
+        <input type="text" id="search-bar" placeholder="Search...">
+        <button id="search-button">Search</button>
+    </div>
+    <button class="add" id="add">Add</button>
+    <div  id=recordItems class="row">
+      <h5 class="tableCName"> First Name </h5>
+      <h5 class="tableCName"> Last Name</h5>
+      <h5 class="tableCName"> Telephone </h5>
+      <h5 class="tableCName"> Email </h5>
+    </div>
+      <div id="employeeInserts"></div>
+</body>
+</html>
