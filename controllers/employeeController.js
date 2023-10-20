@@ -52,6 +52,7 @@ async function updateEmployee(req,res) {
 async function deleteEmployee(req,res) {
     try {
         const id = req.params.id
+        console.log(req.params.id)
         const employee =  await Employee.findByIdAndDelete(id)
         if (employee) {
             return res.status(200).json(Employee)

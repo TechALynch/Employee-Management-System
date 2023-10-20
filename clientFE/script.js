@@ -99,23 +99,15 @@ const employeesContent = document.getElementById("employeeInserts");
                                 case 'update':
                                     window.location.href = `updateEmployee.html?id=${employeeId}`;
                                     
-                                    break;
-                                case 'delete':
-                                    try {
-                                        // Send a DELETE request to your API to delete the selected employee
-                                        await axios.delete(`${baseUrl}employee/${employeeId}`);
-                    
-                                        // Display a success message to the user
-                                        alert('Employee deleted successfully.');
-                    
-                                        // Remove the deleted employee from the UI here if needed
-                                        button.parentElement.parentElement.remove();
-                                    } catch (error) {
-                                        // Handle errors that occur during the DELETE request
-                                        console.error('Error deleting employee:', error);
-                                        alert('Error deleting employee.');
-                                    }
-                                    break;
+                                    case 'delete':
+                                            // Send a DELETE request to your API to delete the selected employee
+                                            await axios.delete(`${base_Url}employee/${employeeId}`);
+                                        
+                                            // Remove the deleted employee from the UI here if needed
+                                            button.parentElement.parentElement.remove();
+                                            // Display a success message to the user
+                                            alert('Employee deleted successfully');
+                                        break;
                             }
                         });
                     });

@@ -28,6 +28,18 @@ createEmployeebtn.addEventListener('click', async (e) => {
         })
 
         console.log('Employee created:', response.data)
+        alert('Employee Created Successfully');
+
+        // Clear the form by resetting the input fields
+        document.getElementById("firstName").value = '';
+        document.getElementById("lastName").value = '';
+        document.getElementById("tel").value = '';
+        document.getElementById("email").value = '';
+        document.getElementById("address").value = '';
+        document.getElementById("position").value = '';
+        document.getElementById("locationPreference").value = '';
+        document.getElementById("hourlyPayRate").value = '';
+        
     } catch (error) {
         console.error('Error creating Employee:', error)
     }
