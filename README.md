@@ -18,7 +18,14 @@ A full-stack application for  Employee Management. This application is a start d
 ## Features
 - **Full CRUD Functionality**: Perform all essential operations for managing employees<!-- , clients, and locations -->.
 <!-- - **User Authentication**: Implement OAuth for secure access and user management. -->
+
+
+[Wireframe](./wireframe.png)
+
 - **Database**: Utilize MongoDB for efficient data storage and retrieval. Additionaly, it is connected to atlast cloud database. 
+
+
+[Entity Relationship Diagram](./ERD.png)
 
 ## Installation
 To run this application locally, please follow these steps:
@@ -60,6 +67,7 @@ This application uses OAuth for authentication, ensuring secure access to the sy
 
 ## Database
 The application utilizes MongoDB as the database to efficiently store and retrieve data.<!-- Make sure to set up the `MONGODB_URI` environment variable in the `.env` file. -->
+
 
 ## Contributing
 Feel free to contribute to the project by opening issues or submitting pull requests. Your feedback and contributions are highly appreciated.
