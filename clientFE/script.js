@@ -98,6 +98,7 @@ const employeesContent = document.getElementById("employeeInserts");
                                     break;
                                 case 'update':
                                     window.location.href = `updateEmployee.html?id=${employeeId}`;
+                                    break;
                                     
                                     case 'delete':
                                             // Send a DELETE request to your API to delete the selected employee
