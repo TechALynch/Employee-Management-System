@@ -199,7 +199,7 @@ h1 {
 /* Style the employee information container */
 .row2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   margin: 10px;
   background-color: #fff;
   padding: 10px;

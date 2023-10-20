@@ -1,4 +1,5 @@
 # Employee Management System
+<!-- ![Employee Management System](./icons8-database.gif) -->
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -12,12 +13,12 @@
 <!-- - [Authentication](#authentication) -->
 
 ## Introduction
-A full-stack application for  Employee Management. This application is designed to help security companies efficiently manage their employees, clients, and locations. It provides full CRUD (Create, Read, Update, Delete) functionality on both the front and back end, making it a powerful tool for maintaining and organizing essential data.
+A full-stack application for  Employee Management. This application is a start designed to help companies efficiently manage their employees, clients, and/or locations. It provides full CRUD (Create, Read, Update, Delete) functionality on both the front and back end, making it a powerful tool for maintaining and organizing essential data.
 
 ## Features
 - **Full CRUD Functionality**: Perform all essential operations for managing employees<!-- , clients, and locations -->.
 <!-- - **User Authentication**: Implement OAuth for secure access and user management. -->
-- **Database**: Utilize MongoDB for efficient data storage and retrieval.
+- **Database**: Utilize MongoDB for efficient data storage and retrieval. Additionaly, it is connected to atlast cloud database. 
 
 ## Installation
 To run this application locally, please follow these steps:
@@ -27,28 +28,25 @@ git clone https://github.com/TechALynch/Employee-Management-System-.git
 cd employee-management-system
 
 2. Install dependencies:
-npm install
+npm install or sudo npm i if you ru into any issues. 
 
-<!-- 3. Set up environment variables:
-Create a `.env` file in the project's root directory and add the following variables:
-
-PORT=3001 -->
-<!-- MONGODB_URI=your-mongodb-connection-string
-CLIENT_ID=your-oauth-client-id
-CLIENT_SECRET=your-oauth-client-secret -->
-<!-- 
-markdown
-Copy code -->
+4. Run 
+node seed/clientSeedData.js seed/employeeSeedData.js  seed/locationSeedData.js 
 
 4. Start the server:
 npm run dev
 
-5. The application will be available at `http://localhost:3000` by default.
+5. The application will be available at `http://localhost:3001` by default.
 
 ## Technologies
 - Node.js
 - Express.js
 - MongoDB
+- cors
+- morgan
+- mongoose
+- nodemon
+
 <!-- - OAuth (for authentication) -->
 
 ## Usage
