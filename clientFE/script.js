@@ -26,7 +26,7 @@ const employeesContent = document.getElementById("employeeInserts");
                     const recordDiv = document.createElement('div');
                     recordDiv.className = 'record';
 
-                    // Display each employeesInfo object attribute
+                    // Display each employeesInfo object attribute //GPT
                     recordDiv.innerHTML = `
                         <div class="row">
                                 <p class="record-item"> ${employeesInfo.firstName}</p>
