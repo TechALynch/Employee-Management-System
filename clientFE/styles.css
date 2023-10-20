@@ -1,9 +1,8 @@
-/* Search bar start  */
+
 /* Add styling to your search container */
 .search-container {
     position: sticky;
     top: 0;
-    margin-left: 10px;
     background-color: #333;
     padding: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
@@ -12,7 +11,7 @@
 /* Style the search bar and button */
 #search-bar {
     padding: 10px;
-    width: 200px;
+    width: 400px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -27,15 +26,6 @@
 #search-button:hover {
     background-color: #0056b3;
 }
-/* Search bar end */
-
-/* hambuger menu start */
-/* Style for the hamburger menu button */
-/* .menu-toggle {
-    display: none;
-    cursor: pointer;
-    padding: 10px;
-}*/
 
 .bar {
     width: 30px;
@@ -44,27 +34,6 @@
     margin: 6px 0;
     transition: 0.4s;
 }
-
-/* Style the navigation menu */
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-  }
-  
-  /* Hide the links inside the navigation menu (except for logo/home) */
-  .topnav #myLinks {
-    display: none;
-  }
-  
-  /* Style navigation menu links */
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
   
   /* Style the hamburger menu */
   .topnav a.icon {
@@ -80,26 +49,6 @@
     background-color: #ddd;
     color: black;
   }
-  
-  /* Search bar start */
-/* Add styling to your search container */
-.search-container {
-    /* Remove position: sticky; */
-    background-color: #333;
-    padding: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-/* Style the search bar and button */
-/* ... (your search bar styles) ... */
-
-/* hambuger menu start */
-/* Style for the hamburger menu button */
-/* .menu-toggle {
-    display: none;
-    cursor: pointer;
-    padding: 10px;
-}*/
 
 .bar {
     width: 30px;
@@ -148,6 +97,11 @@
     justify-content: space-around;
     margin: 5px 0;
   }
+  .row2 {
+    display: flex;
+    justify-content: row;
+    margin: 5px 0;
+  }
   
   .column {
     flex: 1;
@@ -157,12 +111,23 @@
   }
   
   /* CSS for the table header */
-  .tableCName {
+  /* .tableCName {
     display: flex;
     justify-content: space-around;
     text-align: center;
     font-weight: bold;
+  } */
+/* 
+  .tableCName1{
+    margin-right: 150px;
   }
+  .tableCName2{
+    margin-right: 550px;
+  }
+  .tableCName3{
+
+  }
+  */
 
   /* Add some spacing and styling to the horizontal line */
   hr {
@@ -179,7 +144,7 @@
     flex-direction: column;
   }
   .add{
-      display: inline-block;
+      /* display: inline-block; */
       margin-top: 30px;
       margin-right: 150px;
       background-color: transparent; 
@@ -191,7 +156,7 @@
       text-decoration: none; 
       font-size: 16px; 
       cursor: pointer; 
-      float: right; /* Move the button to the right */
+      float: right; /* Move the button to the right chat gpt*/
   }
 
 .add:hover {
@@ -207,6 +172,53 @@
     border: 1px solid #000;
   }
   #recordItems{
-    margin-right: 600px;
-    margin-top: 50px
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0;
   }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+/* Style the employee information container */
+.row2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the "Home" button */
+#viewEmployeebtn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+#viewEmployeebtn:hover {
+  background-color: #555;
+}

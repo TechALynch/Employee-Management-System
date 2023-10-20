@@ -53,62 +53,21 @@ const employeesContent = document.getElementById("employeeInserts");
                             switch (action) {
                                 case 'view':
                                     window.location.href = `viewEmployee.html?id=${employeeId}`;
-                                    const viewRecordDiv = document.createElement('div');
-                                    recorviewRecordDivdDiv.className = 'viewRecord';
-                                    const base_Url2 = "http://localhost:3001/";
-                                    const response2 = await axios.get(`${base_Url2}employee/${employeeId}`);
-                                    const employeesInfo2 = response2.data
-
-                            // Display each employeesInfo object attribute
-                            viewRecordDiv.innerHTML = `
-                            <form>
-                            <input type="hidden" name="_id" value="${employeeId}">
-                            
-                            <label for="firstName">First Name:</label>
-                            <input type="text" id="firstName" name="firstName" value="${employeesInfo.firstName}" required><br><br>
-                            
-                            <label for="lastName">Last Name:</label>
-                            <input type="text" id="lastName" name="lastName" value="${employeesInfo.firstName}" required><br><br>
-                            
-                            <label for="tel">Telephone:</label>
-                            <input type="text" id="tel" name="tel" value="${employeesInfo.tel}" required><br><br>
-                            
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" value="${employeesInfo.email}" required><br><br>
-                            
-                            <label for="address">Address:</label>
-                            <input type="text" id="address" name="address" value="${employeesInfo.address}" required><br><br>
-                            
-                            <label for="position">Position:</label>
-                            <input type="text" id="position" name="position" value="${employeesInfo.position}" required><br><br>
-                            
-                            <label for="locationPreference">Location Preference:</label>
-                            <input type="text" id="locationPreference" name="locationPreference" value="${employeesInfo.locationPreference}" required><br><br>
-                            
-                            <label for="availability">Availability:</label>
-                            <input type="checkbox" id="availability" name="availability" checked><br><br>
-                            
-                            <label for="hourlyPayRate">Hourly Pay Rate:</label>
-                            <input type="number" id="hourlyPayRate" name="hourlyPayRate" value="${employeesInfo.hourlyPayRate}" required><br><br>
-                            
-                            <input type="submit" id="viewEmployeebtn" value="Home">
-                        </form>
-                            `;
-                            employeesContent.appendChild(viewRecordDiv);
                                     break;
                                 case 'update':
                                     window.location.href = `updateEmployee.html?id=${employeeId}`;
                                     break;
                                     
-                                    case 'delete':
-                                            // Send a DELETE request to your API to delete the selected employee
-                                            await axios.delete(`${base_Url}employee/${employeeId}`);
+                                case 'delete':
+                                    // Send a DELETE request to your API to delete the selected employee
+                                    await axios.delete(`${base_Url}employee/${employeeId}`);
                                         
-                                            // Remove the deleted employee from the UI here if needed
-                                            button.parentElement.parentElement.remove();
-                                            // Display a success message to the user
-                                            alert('Employee deleted successfully');
-                                        break;
+                                    // Remove the deleted employee from the UI here if needed
+                                    button.parentElement.parentElement.remove();
+                                   
+                                    // Display a success message to the user
+                                    alert('Employee deleted successfully');
+                                    break;
                             }
                         });
                     });
